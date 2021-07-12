@@ -1,0 +1,269 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(228, 226, 255);
+    margin: 0px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------ head-details---------------- */
+header{
+    background-color: rgb(79, 67, 245);
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 1% 10%;
+    margin-bottom: 30px;
+}
+.head-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width: 7%;
+    padding: 3%;
+    background-color:rgb(109, 119, 253);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.head-menu{
+    display: flex;
+    column-gap: 10px;
+    font-size: 13px;
+}
+.head-info a{
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(43, 45, 48);
+    transition: .25s ease;
+}
+.head-info a:hover{
+    background-color: rgb(238, 44, 83);
+    color: ghostwhite;
+}
+
+/* --------------- body-section------------- */
+.container{
+    background-color: white;
+    color: black;
+    width: 80%;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+.top-players{
+    margin-bottom: 30px;
+}
+.top{
+    text-align: center;
+    color: rgb(55, 95, 226);
+    margin-bottom: 10px;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player img{
+    height: 56px;
+    width: 56px;
+}
+.name{
+    font-size: 15px;
+    padding: 15px;
+}
+hr{
+    border: 1px solid rgb(206, 217, 228);
+}
+
+
+/* ---------------------------------------------- 
+    Top blog details 
+-------------------------------------------------*/
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    column-gap: 15px;
+    overflow: hidden;
+    padding: 4%;
+}
+.blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(244, 247, 255);
+    padding: 4% 0%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px lightgray;
+    transition: .4s ease-out;
+}
+.blog:hover{
+    transform: scale(1.05);
+}
+.blog .thumbnail img{
+    height: 117px;
+    width: 177px;
+}
+.blog-info{
+    padding-left: 10px;
+}
+.title{
+    font-size: 16px;
+}
+.blog-author{
+    font-size: 14px;
+    color: lightslategrey;
+}
+.blog-author a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(54, 54, 243);
+}
+
+/* ----------------- course section --------------- */
+
+.top-courses{
+        text-align: center;
+        color: rgb(55, 95, 226);
+        margin-bottom: 80px;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    padding-left: 7%;
+}
+.course{
+    width: 224px;
+    background-color: lavender;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: .5s ease;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px lightgray;
+    cursor:pointer;
+}
+.course:hover{
+    transform: translate(0%,-5%) scale(1.07);
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.fa-star.filled{
+    color: rgb(238, 204, 10);
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star.empty{
+    color: lightgray;
+}
+
+/* ----------------footer-design ---------------- */
+
+footer{
+    background-color: black;
+    padding: 4.5% 10%;
+    text-align: center;
+    color: lightgray;
+}
+.footer{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
+}
+.thank{
+    color: lightgreen;
+}
+
+/* ------------------ media query ------------------ */
+
+@media only screen and (max-width:688px) {
+    .head-div {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+    }
+    .head-menu{
+        display: grid;
+        justify-content: center;
+    }
+    .players , .blogs {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .courses{
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 20%;
+    }
+    .course{
+        margin-bottom: 15%;
+    }
+    .player{
+        background-color: ghostwhite;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        box-shadow: 0px 2px 5px lightgray;
+        transition: .3s ease;
+        overflow: hidden;
+    }
+    .player:hover{
+        transform: scaleX(1.07);
+    }
+}
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .head-div {
+        display: flex;
+        justify-content: center;
+    }
+    .logo img{
+        width: 20%;
+        border-radius: 25px;
+    }
+    .head-menu{
+        display:grid;
+        text-align: right;
+    }
+    .players {
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+    }
+    .blogs {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .course{
+        margin-bottom: 15%;
+    }
+    .courses{
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 10%;
+    }
+    .player{
+        background-color: ghostwhite;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        box-shadow: 0px 2px 5px lightgray;
+        transition: .4s ease;
+        overflow: hidden;
+    }
+    .player:hover{
+        transform: scaleX(1.05);
+    }
+}
